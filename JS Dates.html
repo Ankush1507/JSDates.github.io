@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Task</title>
+</head>
+<body>
+    
+    <span id="sec"></span> :
+    <span id="min"></span> :
+    <span id="hours"></span> :
+    <span id="time"></span> / 
+    <span id="day"></span> /
+    <span id="date"></span> /
+    <span id="month"></span> /
+    <span id="year"></span> 
+
+    <script>
+        var d=new Date();
+
+        document.getElementById('sec').innerHTML=d.getSeconds();
+        document.getElementById('min').innerHTML=d.getMinutes();
+        document.getElementById('hours').innerHTML=d.getHours();
+        document.getElementById('time').innerHTML=d.getTime();
+        document.getElementById('day').innerHTML=[d.getDay()+1 ];
+        document.getElementById('date').innerHTML=d.getDate();
+        document.getElementById('month').innerHTML=[d.getMonth()+1];
+        document.getElementById('year').innerHTML=d.getFullYear();
+
+        var hr=d.getHours();
+
+        if(hr>12){
+            document.getElementById('time').innerHTML="PM";
+        }else{
+            document.getElementById('time').innerHTML="AM";
+        }
+
+        
+    </script>
+</body>
+</html>
